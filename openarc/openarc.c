@@ -3872,6 +3872,12 @@ mlfi_eom(SMFICTX *ctx)
 
 			return SMFIS_TEMPFAIL;
 		}
+		if (conf->conf_dolog)
+		{
+			syslog(LOG_INFO, "%s: %s",
+				conf->conf_authservid,
+				arcf_dstring_get(afc->mctx_tmpstr));
+		}
 	}
 
 	/*
