@@ -3875,7 +3875,7 @@ mlfi_eom(SMFICTX *ctx)
 		if (conf->conf_dolog)
 		{
 			syslog(LOG_INFO, "%s: %s",
-				conf->conf_authservid,
+				afc->mctx_jobid,
 				arcf_dstring_get(afc->mctx_tmpstr));
 		}
 	}
